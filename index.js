@@ -12,10 +12,19 @@ proxy.on('error', function(e) {
 	console.dir(e)
 })
 
+// Inject CORS fix into header
+proxy.on('proxyRes', function(proxyRes, req, res, options) {
+	if (proxyRes.headers['Access-Control-Allow-Origin']) {
+		proxyRes.headers['Access-Control-Allow-Origin'] += ', '+ config.localUrl +':'+ config.localPort
+	} else {
+		proxyRes.headers['Access-Control-Allow-Origin'] = config.localUrl +':'+ config.localPort
+	}
+});
+
 // Creating HTTP server and routing traffic through the proxy server
 const server = http.createServer(function (req, res) {
 
-	// rewriting the origin to fool CORS
+	// rewriting the origin to fool CORS on microservices
 	let newReq = req;
 	newReq.headers.origin = config.baseUrl
 

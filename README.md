@@ -6,7 +6,7 @@
    This is what it looks like for IntelliJ [VM Options](https://i.stack.imgur.com/aPKg0.png) and Eclipse [VM arguments](https://i.stack.imgur.com/94l6E.png). This setting is just what launches the jar file.
    If you use the command line, you can launch using, example: `java -jar -Dserver.port=8082 accountservice-0.0.1-SNAPSHOT.jar`
 
-2. Download extension: [Moesif Origin & CORS Changer](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc) and enable it when testing (sorry, you need Chrome :P)
+2. Change the `localPort` in `config.json` to the corresponding port the UI is running under
 
 3. Clone this repo
 
@@ -23,6 +23,8 @@
 * `port`: the port the proxy server runs on. This will be the "API" access point for all local portals.
 
 * `localUrl`: this is where the microservices reside on. This will almost always be localhost
+
+* `localPort`: this is where you set the UI port (default: 3000)
 
 * `routeTable`: an array of objects for each microservice
 
