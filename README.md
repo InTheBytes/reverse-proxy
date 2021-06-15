@@ -62,13 +62,13 @@ This command needs to be made from the reverse-proxy folder, and relies on all o
 
 Example:
 
-InTheBytes
-|---account-service
-|---order-service
-|---search-service
-|---restaurant-manage-service
-|---open-api-since
-|---reverse-proxy (call command here)
+InTheBytes:
+* ---account-service
+* ---order-service
+* ---search-service
+* ---restaurant-manage-service
+* ---open-api-since
+* ---reverse-proxy (call command here)
 
 *Note: There is a JVM versioning inconsistency currently that causes this script to fail for order-service and open-api with the current state of develop. Hotfixes are currently in place and awaiting a merge. Be advised
 
