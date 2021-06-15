@@ -9,7 +9,6 @@ if ["%~1"]==[""] (
 	call :Check %~4
 	call :Check %~5
 )
-cd reverse-proxy
 npm start
 setlocal
 exit /B 0
@@ -54,6 +53,6 @@ exit /b 0
 
 :Launch
 setlocal
-start cmd.exe /k "cd ..\%~1 & mvn clean package & java -jar -Dserver.port=%~2 target\%~3-0.0.1-SNAPSHOT.jar"
+start cmd.exe /k "cd ..\%~1 & mvn clean package & java -jar -Dserver.port=%~2 -Dspring.datasource.maxActive=1 target\%~3-0.0.1-SNAPSHOT.jar"
 endlocal
 exit /b 0

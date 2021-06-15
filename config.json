@@ -1,8 +1,8 @@
 {
-	"baseUrl": "https://stacklunch.com",
+	"baseUrl": "https://admin.stacklunch.com",
 	"port": "5050",
 	"localUrl": "http://localhost",
-	"localPort": 3000,
+	"localPort": 4200,
 	"routeTable": [
 		{
 			"port": 8081,
