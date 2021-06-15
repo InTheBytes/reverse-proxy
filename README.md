@@ -49,3 +49,28 @@
 
 This was put together in a few hours.  
 Some shortcomings of this proxy server is that redirects don't seem to be working properly.
+
+
+## Script Automation
+A command line (cmd) script exists to run conveniently run the microservices along with the proxy - `stacklaunch`
+It currently takes up to five arguments including: `restaurant`, `account`, `order`, `search`, and `swagger`
+
+Providing no arguments will default to opening all services, but if arguments are provided only those services will run.
+Each service will open in it's own window for tracking and debugging (and because its kind of the only way for this simple solution to work) - so not providing the specific services you want to run may be annoying.
+
+This command needs to be made from the reverse-proxy folder, and relies on all of the projects to be reflective of the github organization with default directory names as would be pulled from github. The name of the root folder is inconsequential
+
+Example:
+
+InTheBytes
+|---account-service
+|---order-service
+|---search-service
+|---restaurant-manage-service
+|---open-api-since
+|---reverse-proxy (call command here)
+
+*Note: There is a JVM versioning inconsistency currently that causes this script to fail for order-service and open-api with the current state of develop. Hotfixes are currently in place and awaiting a merge. Be advised
+
+### Possible Changes
+It would be nice to also have a script that closed all of them. But in the spirit of this repository, only patchy fix-it code is allowed here.
