@@ -1,8 +1,7 @@
 {
-	"baseUrl": "https://admin.stacklunch.com",
+	"baseUrl": "https://stacklunch.com",
 	"port": "5050",
 	"localUrl": "http://localhost",
-	"localPort": 4200,
 	"routeTable": [
 		{
 			"port": 8081,
@@ -35,8 +34,8 @@
 		{
 			"port": 8084,
 			"patterns": [
-				"(^\\/orders.+)",
-				"(^\\/orders\\/.+)",
+				"(^\\/order.+)",
+				"(^\\/order\\/.+)",
 				"(^\\/v3\\/api-docs\\/orderservice)"
 			]
 		},

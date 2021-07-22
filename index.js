@@ -15,9 +15,9 @@ proxy.on('error', function(e) {
 // Inject CORS fix into header
 proxy.on('proxyRes', function(proxyRes, req, res, options) {
 	if (proxyRes.headers['Access-Control-Allow-Origin']) {
-		proxyRes.headers['Access-Control-Allow-Origin'] += ', '+ config.localUrl +':'+ config.localPort
+		proxyRes.headers['Access-Control-Allow-Origin'] += ', '+ req.headers.referer.slice(0, -1)
 	} else {
-		proxyRes.headers['Access-Control-Allow-Origin'] = config.localUrl +':'+ config.localPort
+		proxyRes.headers['Access-Control-Allow-Origin'] = req.headers.referer.slice(0, -1)
 	}
 });
 
