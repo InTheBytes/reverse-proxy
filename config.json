@@ -9,34 +9,28 @@
 				"(^\\/search.+)",
 				"(^\\/search\\/.+)",
 				"(^\\/filter.+)",
-				"(^\\/filter\\/.+)",
-				"(^\\/v3\\/api-docs\\/searchservice)"
+				"(^\\/filter\\/.+)"
 			]
 		},
 		{
 			"port": 8082,
 			"patterns": [
 				"(^\\/user.+)",
-				"(^\\/user\\/.+)",
-				"(^\\/login)",
-				"(^\\/login\\/.+)",
-				"(^\\/v3\\/api-docs\\/accountservice)"
+				"(^\\/user\\/.+)"
 			]
 		},
 		{
 			"port": 8083,
 			"patterns": [
-				"(^\\/apis\\/restaurants.+)",
-				"(^\\/apis\\/restaurant.+)",
-				"(^\\/v3\\/api-docs\\/restaurantservice)"
+				"(^\\/restaurant.+)",
+				"(^\\/restaurant.\\/+)"
 			]
 		},
 		{
 			"port": 8084,
 			"patterns": [
 				"(^\\/order.+)",
-				"(^\\/order\\/.+)",
-				"(^\\/v3\\/api-docs\\/orderservice)"
+				"(^\\/order\\/.+)"
 			]
 		},
 		{
@@ -44,6 +38,20 @@
 			"patterns": [
 				"(^\\/swagger.+)",
 				"(^\\/v3\\/api-docs\\/swagger-config)"
+			]
+		},
+		{
+			"port": 8086,
+			"patterns": [
+				"(^\\/payment.+)",
+				"(^\\/payment\\/.+)"	
+			]
+		},
+		{
+			"port": 8087,
+			"patterns": [
+				"(^\\/delivery.+)",
+				"(^\\/delivery\\/.+)"
 			]
 		}
 	]

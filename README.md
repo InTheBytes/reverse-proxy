@@ -40,6 +40,10 @@
 
 * OpenAPI Service on port 8085
 
+* Payment Service on port 8086
+
+* Delivery Service on port 8087
+
 
 ## Improvement
 
@@ -49,7 +53,7 @@ Some shortcomings of this proxy server is that redirects don't seem to be workin
 
 ## Script Automation
 A command line (cmd) script exists to run conveniently run the microservices along with the proxy - `stacklaunch`
-It currently takes up to five arguments including: `restaurant`, `account`, `order`, `search`, and `swagger`
+It currently takes up to five arguments including: `restaurant`, `account`, `order`, `search`, `payment`, `delivery` and `swagger`
 
 Providing no arguments will default to opening all services, but if arguments are provided only those services will run.
 Each service will open in it's own window for tracking and debugging (and because its kind of the only way for this simple solution to work) - so not providing the specific services you want to run may be annoying.
@@ -64,6 +68,8 @@ InTheBytes:
 * ---search-service
 * ---restaurant-manage-service
 * ---open-api-since
+* ---payment-service
+* ---delivery-service
 * ---reverse-proxy (call command here)
 
 *Note: There is a JVM versioning inconsistency currently that causes this script to fail for order-service and open-api with the current state of develop. Hotfixes are currently in place and awaiting a merge. Be advised
